@@ -10,7 +10,7 @@ services:
     depends_on:
       - mongo1
       - billing
-      - rammitmq
+      - rabbitmq
     volumes:
       - .:/usr/src/app
       - /usr/src/app/node_modules
@@ -26,11 +26,11 @@ services:
       - ./apps/billing/.env
     depends_on:
       - mongo1
-      - rammitmq
+      - rabbitmq
     volumes:
       - .:/usr/src/app
       - /usr/src/app/node_modules
-  rammitmq:
+  rabbitmq:
     image: rabbitmq
     ports:
       - '5672:5672'
