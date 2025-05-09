@@ -9,6 +9,5 @@ export class BillingService {
 
   bill(data: any) {
     this.logger.log(`Billing for order`, data);
-    console.log(`Billing for order`, data);
   }
 }
